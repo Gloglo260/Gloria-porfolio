@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gloria</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#111;
+            color:white;
+        }
+
+
+        header{
+            width:100%;
+            padding:20px 8%;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000;
+            background:rgba(0,0,0,0.5);
+            backdrop-filter:blur(5px);
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#c7a17a;
+        }
+
+        
+
+        .hero{
+            width:100%;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:120px 8%;
+            background:linear-gradient(to right,#161616 50%, #d8cbb8 50%);
+        }
+
+        .hero-text{
+            width:50%;
+        }
+
+        .hero-text h3{
+            font-size:22px;
+            color:#c7a17a;
+            margin-bottom:10px;
+        }
+
+        .hero-text h1{
+            font-size:55px;
+            margin-bottom:15px;
+        }
+
+        .hero-text span{
+            color:#c7a17a;
+        }
+
+        .hero-text p{
+            line-height:1.8;
+            color:#d6d6d6;
+            margin-top:20px;
+            max-width:500px;
+        }
+
+        .buttons{
+            margin-top:30px;
+            display:flex;
+            gap:20px;
+        }
+
+        .btn{
+            padding:12px 25px;
+            border:none;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn1{
+            background:#c7a17a;
+            color:white;
+        }
+
+        .btn2{
+            border:2px solid #c7a17a;
+            color:#c7a17a;
+        }
+
+        .btn:hover{
+            transform:scale(1.05);
+        }
+
+        
+
+        .hero-image{
+            width:40%;
+            display:flex;
+            justify-content:center;
+        }
+
+        .hero-image img{
+            width:380px;
+            height:500px;
+            object-fit:cover;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        
+
+        section{
+            padding:100px 8%;
+        }
+
+        .title{
+            text-align:center;
+            font-size:40px;
+            margin-bottom:60px;
+            color:#c7a17a;
+        }
+
+        
+
+        .about{
+            text-align:center;
+            line-height:2;
+            max-width:900px;
+            margin:auto;
+            color:#d6d6d6;
+        }
+
+        
+
+        .projects-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .project-card{
+            background:#1d1d1d;
+            padding:30px;
+            border-radius:20px;
+            transition:0.3s;
+            border:1px solid #2a2a2a;
+        }
+
+        .project-card:hover{
+            transform:translateY(-10px);
+        }
+
+        .project-card h3{
+            color:#c7a17a;
+            margin-bottom:15px;
+        }
+
+        .project-card p{
+            color:#d6d6d6;
+            line-height:1.7;
+        }
+
+
+        .skills{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+
+        .skill{
+            background:#1d1d1d;
+            padding:15px 30px;
+            border-radius:30px;
+            border:1px solid #c7a17a;
+        }
+
+
+
+        .contact{
+            text-align:center;
+            line-height:2;
+            color:#d6d6d6;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#0d0d0d;
+            color:#999;
+        }
+
+        @media(max-width:900px){
+
+            .hero{
+                flex-direction:column-reverse;
+                text-align:center;
+                background:#161616;
+            }
+
+            .hero-text{
+                width:100%;
+                margin-top:40px;
+            }
+
+            .hero-image{
+                width:100%;
+            }
+
+            .hero-image img{
+                width:280px;
+                height:380px;
+            }
+
+            .buttons{
+                justify-content:center;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <header>
+        <nav>
+            <a href="#about">À propos</a>
+            <a href="#projects">Projets</a>
+            <a href="#skills">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h3>Bonjour, je suis</h3>
+
+            <h1>
+                NGASSIKI <span>Gloria</span>
+            </h1>
+
+            <h2>Étudiante en informatique • Développeuse web débutante</h2>
+
+            <p>
+                Je suis en première année d’informatique et j’apprends actuellement les bases de la programmation web. 
+                Ce portfolio regroupe les projets et exercices que j’ai réalisés pendant mon apprentissage
+                , ainsi que les compétences que je développe petit à petit.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn btn1">Mes projets</a>
+                <a href="#contact" class="btn btn2">Me contacter</a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="c:\Users\pc\IMAGE 5.jpeg" alt="Photo Gloria">
+        </div>
+
+    </section>
+
+    <section id="about">
+
+        <h1 class="title">À propos</h1>
+
+        <div class="about">
+
+            <p>
+                Je suis étudiante en première année d’informatique et je m’intéresse au développement web ainsi qu’à la programmation en général. 
+                J’apprends actuellement le HTML, le CSS, le JavaScript, le Python et le Java à travers les cours et différents exercices pratiques.
+            </p>
+
+            <br>
+
+            <p>
+                En dehors des études, j’aime lire des webtoons et des Wattpad, regarder des animés et des séries,
+                 ainsi qu’écouter de la musique, surtout de la K-pop.
+            </p>
+
+            <br>
+
+            <p>
+                Mon objectif est de continuer à améliorer mes compétences en programmation et à réaliser des projets concrets afin de devenir développeuse informatique.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="projects">
+
+        <h1 class="title">Projets</h1>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <h3>Gestion des notes des étudiants</h3>
+
+                <p>
+                    Programme réalisé en Java permettant d’enregistrer les notes des étudiants, calculer les moyennes et générer un bulletin.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Facturation de produits</h3>
+
+                <p>
+                    Programme en Python permettant de calculer le prix de plusieurs produits avec la TVA et le montant total.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Catalogue de médiathèque</h3>
+
+                <p>
+                    Projet en C# permettant de gérer différents supports comme les livres, DVD et magazines.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="skills">
+
+        <h1 class="title">Compétances</h1>
+
+        <div class="skills">
+
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">C#</div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact">
+
+        <h1 class="title">Contact</h1>
+
+        <div class="contact">
+
+            <p>Email : nggloria44@gmail.com</p>
+            <p>GitHub : : @Gloglo260</p>
+            
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 - Portfolio Gloria
+    </footer>
+
+</body>
+</html>
+
+
